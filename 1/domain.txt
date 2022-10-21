@@ -2,6 +2,11 @@
 
 ## Overview
 
+A library has a catalog of book copies available for lease. 
+Each book copy is identified in the library system by its SKU identifier and is available in the library system for a specific amount of time. 
+If the lease availability expires, a book copy is discontinued or offered under a different SKU with a new experation date. 
+Library users can search each offered book copy by the book information, such as ISBN, author name, or genre and language categories.
+
 ## Specification
 
 - **Book**
@@ -33,11 +38,11 @@
     
     - in genre
       - type: Genre
-      - description: Genre of book.
+      - description: Genre of book. Book can have multiple genres.
     
     - in language
       - type: Language
-      - description: The language of the book.
+      - description: The language of the book. Book can have only one language, bilingual books not considered.
     
     - author
       - type: Person
@@ -118,7 +123,7 @@
 
   - Attributes:
     
-    - SKU:
+    - sku:
       - type: string
       - description: Stock Keeping Unit identifier unique in a library system.
       - example: PO-TS-32-BLU
@@ -139,7 +144,7 @@
       - type: Book
       - description: Book that is offered by this lease.
 
-    - Availability
+    - availability
       - type: Availability
       - description: Current state of the lease availability.
 
@@ -149,12 +154,12 @@
 
   - Attributes:
 
-    - Name
+    - name
       - type: string
       - description: Name of the state
       - example: Out of stock
 
-    - Description
+    - description
       - type: string
       - description: Textual description of the state.
       - example: Item is currently not available.
@@ -188,4 +193,4 @@
 
     - makes offer:
       - type: Lease Offer
-      - description: Library offered 
+      - description: Library offered
