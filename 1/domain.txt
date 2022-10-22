@@ -4,7 +4,7 @@
 
 A library has a catalog of book copies available for lease. 
 Each book copy is identified in the library system by its SKU identifier and is available in the library system for a specific amount of time. 
-If the lease availability expires, a book copy is discontinued or offered under a different SKU with a new experation date. 
+If the lease availability expires, a book copy is discontinued or offered under a different SKU with a new expiration date. 
 Library users can search each offered book copy by the book information, such as ISBN, author name, or genre and language categories.
 
 ## Specification
