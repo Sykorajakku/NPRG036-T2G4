@@ -65,7 +65,7 @@ Library users can search each offered book copy by the book information, such as
       - example: John
 
     - birth date
-      - type: string
+      - type: date
       - description: Person's date of birth in Gregorian calendar.
       - example: 1982-01-03
 
