@@ -187,10 +187,6 @@ Library users can search each offered book copy by the book information, such as
 
   - Associations:
 
-    - parent organization
-      - type: Library
-      - description: 
-
     - makes offer:
       - type: Lease Offer
-      - description: Library offered
+      - description: Library offers a book copy lease.
