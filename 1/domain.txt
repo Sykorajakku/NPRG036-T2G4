@@ -144,7 +144,7 @@ Library users can search each offered book copy by the book information, such as
       - type: Book
       - description: Book that is offered by this lease.
 
-    - availability
+    - available
       - type: Availability
       - description: Current state of the lease availability.
 
