@@ -5,13 +5,15 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# Validator: http://ttl.summerofcode.be Just copy-paste :)
+
 <book/9780345339706> a schema:Book;
     schema:isbn "9780345339706"@en;
     schema:name "The Fellowship of the Ring (The Lord of the Rings, Part 1)"@en;
     schema:keywords "middle-earth"@en, "quest"@en;
     schema:author <author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5>;
     schema:inLanguage <language/en>;
-    schema:inGenre <literary-genre/fantasy>;
+    schema:inGenre <literary-genre/fantasy>.
 
 <book/9788072038299> a schema:Book;
     schema:isbn "9780395974681"@en;
