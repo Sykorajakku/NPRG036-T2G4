@@ -7,6 +7,8 @@
 
 # Validator: http://ttl.summerofcode.be Just copy-paste :)
 
+# Books - Original
+
 <book/9780345339706> a schema:Book;
     schema:isbn "9780345339706"@en;
     schema:name "The Fellowship of the Ring (The Lord of the Rings, Part 1)"@en;
@@ -14,6 +16,24 @@
     schema:author <author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5>;
     schema:inLanguage <language/en>;
     schema:inGenre <literary-genre/fantasy>.
+
+<book/9781785042409> a schema:Book;
+    schema:isbn "9781785042409"@en;
+    schema:name "How to Win Friends and Influence People"@en;
+    schema:keywords "communication"@en, "speaking"@en;
+    schema:author <author/5i824hb6-5839-4563-8271-1e86zwe3b3f6>;
+    schema:inLanguage <language/en>;
+    schema:inGenre <literary-genre/nonfiction>.
+
+<book/9780099518471> a schema:Book;
+    schema:isbn "9780099518471"@en;
+    schema:name "Brave New World"@en;
+    schema:keywords "society"@en, "future"@en, "dystopia"@en;
+    schema:author <author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7>;
+    schema:inLanguage <language/en>;
+    schema:inGenre <literary-genre/sci-fi>.
+
+# Books - Translations
 
 <book/9788072038299> a schema:Book;
     schema:isbn "9780395974681"@en;
@@ -24,14 +44,59 @@
     schema:inGenre <literary-genre/fantasy>;
     schema:translationOfWork <book/9780345339706>.
 
+<book/9788073065195> a schema:Book;
+    schema:isbn "9788073065195"@en;
+    schema:name "Jak získávat přátele a působit na lidi"@cs, "How to Win Friends and Influence People"@en;
+    schema:keywords "communication"@en, "speaking"@en;
+    schema:author <author/5i824hb6-5839-4563-8271-1e86zwe3b3f6>;
+    schema:inLanguage <language/cs>;
+    schema:inGenre <literary-genre/nonfiction>;
+    schema:translationOfWork <book/9781785042409>.
+
+<book/9788080618643> a schema:Book;
+    schema:isbn "9788080618643"@en;
+    schema:name "Prekrásny nový svet"@sk, "Brave New World"@en;
+    schema:keywords "society"@en, "future"@en, "dystopia"@en;
+    schema:author <author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7>;
+    schema:inLanguage <language/sk>;
+    schema:inGenre <literary-genre/sci-fi>;
+    schema:translationOfWork <book/9780099518471>.
+
+# Authors
+
 <author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5> a schema:Author;
     schema:familyName "Tolkien"@en;
     schema:givenName "John"@en, "Ronald"@en, "Reuel"@en;
-    schema:birthDate "1892-01-03"^^xsd:date.
+    schema:birthDate "1892-01-03"^^xsd:date;
+    schema:knowsLanguage <language/en>.
+
+<author/5i824hb6-5839-4563-8271-1e86zwe3b3f6> a schema:Author;
+    schema:familyName "Carnegie"@en;
+    schema:givenName "Dale"@en, "Brackenridge"@en;
+    schema:birthDate "1888-11-24"^^xsd:date;
+    schema:knowsLanguage <language/en>.
+
+<author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7> a schema:Author;
+    schema:familyName "Huxley"@en;
+    schema:givenName "Aldous"@en, "Leonard"@en;
+    schema:birthDate "1894-07-26"^^xsd:date;
+    schema:knowsLanguage <language/en>.
+
+# Genres
 
 <literary-genre/fantasy> a dbpedia:LiteraryGenre;
     rdfs:label "Fantasy"@en;
     rdfs:comment "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore."@en.
+
+<literary-genre/nonfiction> a dbpedia:LiteraryGenre;
+    rdfs:label "Nonfiction"@en;
+    rdfs:comment "Nonfiction is any document or media content that attempts to provide accurate information regarding a real-world topic. It is written to communicate facts or opinions about reality."@en.
+
+<literary-genre/sci-fi> a dbpedia:LiteraryGenre;
+    rdfs:label "Sci-Fi"@en;
+    rdfs:comment "Science fiction (sci-fi) is a form of fiction that deals principally with the impact of actual or imagined science upon society or individuals."@en.
+
+# Languages
 
 <language/en> a schema:Language;
     schema:name "English"@en;
@@ -42,3 +107,65 @@
     schema:name "Czech"@en;
     schema:alternateName "cs"@en;
     schema:description "Spoken by over 10 million people, it serves as the official language of the Czech Republic."@en.
+
+<language/sk> a schema:Language;
+    schema:name "Slovak"@en;
+    schema:alternateName "sk"@en;
+    schema:description "Slovak is the language spoken in Slovakia. It is a language from Slavic language family."@en.
+
+# Libraries
+
+<library/pardubice-1> a schema:Library;
+    schema:name "Krajská knihovna v Pardubicích"@cs;
+    schema:url "https://kkpce.cz"^^xsd:anyURI;
+    schema:email "dotazy@kkpce.cz"@en;
+    schema:makesOffer <lease-offer/ks944rur>;
+    schema:makesOffer <lease-offer/ks945rur>.
+
+<library/hradec-kralove-1> a schema:Library;
+    schema:name "Knihovna města Hradce Králové"@cs;
+    schema:url "https://www.knihovnahk.cz"^^xsd:anyURI;
+    schema:email "knihovna@knihovnahk.cz"@en;
+    schema:makesOffer <lease-offer/ks94hrdc>.
+
+<library/brno-1> a schema:Library;
+    schema:name "Moravská zemská knihovna v Brně"@cs;
+    schema:url "https://www.mzk.cz/"^^xsd:anyURI;
+    schema:email "mzk@mzk.cz"@en.
+
+# Lease Offers
+
+<lease-offer/ks944rur> a schema:LeaseOffer;
+    schema:sku "KS944RUR"@en;
+    schema:availableFrom "2022-09-13"^^xsd:date;
+    schema:availableUntil "2032-09-13"^^xsd:date;
+    schema:itemOffered <book/9780345339706>;
+    schema:availability: <availability/available>.
+
+<lease-offer/ks945rur> a schema:LeaseOffer;
+    schema:sku "KS945RUR"@en;
+    schema:availableFrom "2020-05-01"^^xsd:date;
+    schema:availableUntil "2030-09-01"^^xsd:date;
+    schema:itemOffered <book/9780345339706>;
+    schema:availability: <availability/available>.
+
+<lease-offer/ks94hrdc> a schema:LeaseOffer;
+    schema:sku "KS94HRDC"@en;
+    schema:availableFrom "2015-05-01"^^xsd:date;
+    schema:availableUntil "2025-09-01"^^xsd:date;
+    schema:itemOffered <book/9780345339706>;
+    schema:availability: <availability/available>.
+
+# Availability
+
+<availability/available> a schema:Availability;
+    schema:name "Available"@en;
+    schema:description "A book is available for offer."@en.
+
+<availability/not-available> a schema:Availability;
+    schema:name "Not available"@en;
+    schema:description "A book is not available for offer."@en.
+
+<availability/loaned> a schema:Availability;
+    schema:name "Loaned"@en;
+    schema:description "A book is not available for offer. The book will be available after it's been returned."@en.
