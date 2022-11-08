@@ -66,6 +66,3 @@ CREATE (knihovnaBrno:Library { name: 'Moravská zemská knihovna v Brně', url: 
 CREATE (krajskaPce)-[:MAKES_OFFER { availableFrom: '2022-09-13', availableUntil: '2032-09-13', sku: 'KS944RUR', availability: 'available' }]->(fellowship)
 CREATE (krajskaPce)-[:MAKES_OFFER { availableFrom: '2020-05-01', availableUntil: '2030-09-01', sku: 'KS945RUR', availability: 'available' }]->(fellowship)
 CREATE (knihovnaHk)-[:MAKES_OFFER { availableFrom: '2015-05-01', availableUntil: '2025-09-01', sku: 'KS94HRDC', availability: 'available' }]->(fellowship)
-CREATE (krajskaPce)-[:MAKES_OFFER { availableFrom: '2020-09-13', availableUntil: '2030-09-13', sku: 'KS946RUR', availability: 'available' }]->(spolecenstvo)
-CREATE (knihovnaHk)-[:MAKES_OFFER { availableFrom: '2002-09-14', availableUntil: '2004-09-18', sku: 'KS915RUR', availability: 'available' }]->(jakZiskavatPratele)
-CREATE (knihovnaHk)-[:MAKES_OFFER { availableFrom: '2002-09-14', availableUntil: '2004-09-18', sku: 'KS335RUR', availability: 'available' }]->(jakZiskavatPratele)
