@@ -5,9 +5,8 @@ PREFIX schema: <http://schema.org/>
 PREFIX dbpedia: <http://dbpedia.org/ontology/> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
-#
-#
-#
+# For each author count number of lease offers of their books, including translations (also transitively)
+# Counts all only offers once - does not add translations as unique books.
 
 SELECT ?author COUNT(?offer)
 WHERE {
