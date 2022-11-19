@@ -1,0 +1,117 @@
+{
+  "@context": {
+    "@base": "http://mff.cuni.cz/NPRG036-T2G4/",
+    "@vocab": "http://schema.org/",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dbpedia": "http://dbpedia.org/ontology/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "@language": "en",
+    "name": {
+      "@container": "@language"
+    },
+    "description": {
+      "@container": "@language"
+    },
+    "url": {
+      "@type": "xsd:anyURI"
+    },
+    "availableFrom": {
+      "@type": "xsd:date"
+    },
+    "availableUntil": {
+      "@type": "xsd:date"
+    },
+    "birthDate": {
+      "@type": "xsd:date"
+    },
+    "keywords": {
+      "@container": "@language"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "library/pardubice-1",
+      "@type": "Library",
+      "name": {
+        "cs": "Krajská knihovna v Pardubicích"
+      },
+      "url": "https://kkpce.cz",
+      "email": "dotazy@kkpce.cz",
+      "makesOffer": [
+        {
+          "@id": "lease-offer/ks944rur",
+          "@type": "LeaseOffer",
+          "sku": "KS944RUR",
+          "availableFrom": "2022-09-13",
+          "availableUntil": "2032-09-13",
+          "availability": {
+            "@id": "availability/available",
+            "@type": "Availability",
+            "name": {
+              "en": "Available"
+            },
+            "description": {
+              "en": "A book is available for offer."
+            }
+          },
+          "itemOffered": {
+            "@id": "book/9780345339706",
+            "@type": "Book",
+            "isbn": "9780345339706",
+            "name": {
+              "en": "The Fellowship of the Ring (The Lord of the Rings, Part 1)"
+            },
+            "keywords": [
+              "middle-earth",
+              "quest"
+            ],
+            "inLanguage": {
+              "@id": "language/en",
+              "@type": "Language",
+              "name": {
+                "en": "English"
+              },
+              "alternateName": "en",
+              "description": "English is a West Germanic language of the Indo-European language family."
+            },
+            "inGenre": {
+              "@id": "literary-genre/fantasy",
+              "@type": "dbpedia:LiteraryGenre",
+              "@context": {
+                "name": {
+                  "@id": "rdfs:label"
+                },
+                "description": {
+                  "@id": "rdfs:comment"
+                }
+              },
+              "name": "Fantasy",
+              "description": "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore."
+            },
+            "author": {
+              "@id": "author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5",
+              "@type": "Author",
+              "familyName": "Tolkien",
+              "givenName": [
+                "John",
+                "Ronald",
+                "Reuel"
+              ],
+              "birthDate": "1892-01-03",
+              "knowsLanguage": {
+                "@id": "language/en",
+                "@type": "Language",
+                "name": {
+                  "en": "English"
+                },
+                "alternateName": "en",
+                "description": "English is a West Germanic language of the Indo-European language family."
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
