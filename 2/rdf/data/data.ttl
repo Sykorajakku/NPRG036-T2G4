@@ -15,7 +15,7 @@
     schema:keywords "middle-earth"@en, "quest"@en;
     schema:author <author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5>;
     schema:inLanguage <language/en>;
-    schema:inGenre <literary-genre/fantasy>.
+    schema:genre <literary-genre/fantasy>.
 
 <book/9781785042409> a schema:Book;
     schema:isbn "9781785042409"@en;
@@ -23,7 +23,7 @@
     schema:keywords "communication"@en, "speaking"@en;
     schema:author <author/5i824hb6-5839-4563-8271-1e86zwe3b3f6>;
     schema:inLanguage <language/en>;
-    schema:inGenre <literary-genre/nonfiction>.
+    schema:genre <literary-genre/nonfiction>.
 
 <book/9780099518471> a schema:Book;
     schema:isbn "9780099518471"@en;
@@ -31,7 +31,7 @@
     schema:keywords "society"@en, "future"@en, "dystopia"@en;
     schema:author <author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7>;
     schema:inLanguage <language/en>;
-    schema:inGenre <literary-genre/sci-fi>.
+    schema:genre <literary-genre/sci-fi>.
 
 # Books - Translations
 
@@ -41,7 +41,7 @@
     schema:keywords "middle-earth"@en, "quest"@en;
     schema:author <author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5>;
     schema:inLanguage <language/cs>;
-    schema:inGenre <literary-genre/fantasy>;
+    schema:genre <literary-genre/fantasy>;
     schema:translationOfWork <book/9780345339706>.
 
 <book/9788073065195> a schema:Book;
@@ -50,7 +50,7 @@
     schema:keywords "communication"@en, "speaking"@en;
     schema:author <author/5i824hb6-5839-4563-8271-1e86zwe3b3f6>;
     schema:inLanguage <language/cs>;
-    schema:inGenre <literary-genre/nonfiction>;
+    schema:genre <literary-genre/nonfiction>;
     schema:translationOfWork <book/9781785042409>.
 
 <book/9788080618643> a schema:Book;
@@ -59,24 +59,24 @@
     schema:keywords "society"@en, "future"@en, "dystopia"@en;
     schema:author <author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7>;
     schema:inLanguage <language/sk>;
-    schema:inGenre <literary-genre/sci-fi>;
+    schema:genre <literary-genre/sci-fi>;
     schema:translationOfWork <book/9780099518471>.
 
 # Authors
 
-<author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5> a schema:Author;
+<author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5> a schema:Person;
     schema:familyName "Tolkien"@en;
     schema:givenName "John"@en, "Ronald"@en, "Reuel"@en;
     schema:birthDate "1892-01-03"^^xsd:date;
     schema:knowsLanguage <language/en>.
 
-<author/5i824hb6-5839-4563-8271-1e86zwe3b3f6> a schema:Author;
+<author/5i824hb6-5839-4563-8271-1e86zwe3b3f6> a schema:Person;
     schema:familyName "Carnegie"@en;
     schema:givenName "Dale"@en, "Brackenridge"@en;
     schema:birthDate "1888-11-24"^^xsd:date;
     schema:knowsLanguage <language/en>.
 
-<author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7> a schema:Author;
+<author/06daw835-98sd-4dgf-69a8-sdfe59ed3b3f7> a schema:Person;
     schema:familyName "Huxley"@en;
     schema:givenName "Aldous"@en, "Leonard"@en;
     schema:birthDate "1894-07-26"^^xsd:date;
@@ -118,43 +118,43 @@
 <library/pardubice-1> a schema:Library;
     schema:name "Krajská knihovna v Pardubicích"@cs;
     schema:url "https://kkpce.cz"^^xsd:anyURI;
-    schema:email "dotazy@kkpce.cz"@en;
+    schema:email <mailto:dotazy@kkpce.cz>;
     schema:makesOffer <lease-offer/ks944rur>;
     schema:makesOffer <lease-offer/ks945rur>.
 
 <library/hradec-kralove-1> a schema:Library;
     schema:name "Knihovna města Hradce Králové"@cs;
     schema:url "https://www.knihovnahk.cz"^^xsd:anyURI;
-    schema:email "knihovna@knihovnahk.cz"@en;
+    schema:email <mailto:knihovna@knihovnahk.cz>;
     schema:makesOffer <lease-offer/ks94hrdc>.
 
 <library/brno-1> a schema:Library;
     schema:name "Moravská zemská knihovna v Brně"@cs;
     schema:url "https://www.mzk.cz/"^^xsd:anyURI;
-    schema:email "mzk@mzk.cz"@en.
+    schema:email <mailto:mzk@mzk.cz>.
 
 # Lease Offers
 
-<lease-offer/ks944rur> a schema:LeaseOffer;
+<lease-offer/ks944rur> a schema:OfferForLease;
     schema:sku "KS944RUR"@en;
     schema:availableFrom "2022-09-13"^^xsd:date;
     schema:availableUntil "2032-09-13"^^xsd:date;
     schema:itemOffered <book/9780345339706>;
-    schema:availability: <availability/available>.
+    schema:availability <availability/available>.
 
-<lease-offer/ks945rur> a schema:LeaseOffer;
+<lease-offer/ks945rur> a schema:OfferForLease;
     schema:sku "KS945RUR"@en;
     schema:availableFrom "2020-05-01"^^xsd:date;
     schema:availableUntil "2030-09-01"^^xsd:date;
     schema:itemOffered <book/9780345339706>;
-    schema:availability: <availability/available>.
+    schema:availability <availability/available>.
 
-<lease-offer/ks94hrdc> a schema:LeaseOffer;
+<lease-offer/ks94hrdc> a schema:OfferForLease;
     schema:sku "KS94HRDC"@en;
     schema:availableFrom "2015-05-01"^^xsd:date;
     schema:availableUntil "2025-09-01"^^xsd:date;
     schema:itemOffered <book/9780345339706>;
-    schema:availability: <availability/available>.
+    schema:availability <availability/available>.
 
 # Availability
 
