@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?authorName (COUNT(?book) AS ?bookCount) ?author
 WHERE {
-    ?author a schema:Author ; 
+    ?author a schema:Person ; 
         schema:familyName ?authorName .
     ?book schema:author ?author .
     FILTER NOT EXISTS {

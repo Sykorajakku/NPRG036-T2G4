@@ -16,7 +16,7 @@ WHERE {
         rdfs:label ?genreName .
     ?language a schema:Language ;
         schema:name ?languageName .
-    ?book schema:inGenre ?genre ;
+    ?book schema:genre ?genre ;
         schema:inLanguage ?language ;
         schema:author ?author .
 }

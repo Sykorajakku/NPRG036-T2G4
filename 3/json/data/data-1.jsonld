@@ -10,23 +10,14 @@
     "name": {
       "@container": "@language"
     },
-    "description": {
-      "@container": "@language"
-    },
     "url": {
       "@type": "xsd:anyURI"
     },
-    "availableFrom": {
+    "availabilityStarts": {
       "@type": "xsd:date"
     },
-    "availableUntil": {
+    "availabilityEnds": {
       "@type": "xsd:date"
-    },
-    "birthDate": {
-      "@type": "xsd:date"
-    },
-    "keywords": {
-      "@container": "@language"
     }
   },
   "@graph": [
@@ -37,78 +28,73 @@
         "cs": "Krajská knihovna v Pardubicích"
       },
       "url": "https://kkpce.cz",
-      "email": "dotazy@kkpce.cz",
+      "email": {
+        "@id": "mailto:dotazy@kkpce.cz"
+      },
       "makesOffer": [
         {
           "@id": "lease-offer/ks944rur",
-          "@type": "LeaseOffer",
+          "@type": "OfferForLease",
           "sku": "KS944RUR",
-          "availableFrom": "2022-09-13",
-          "availableUntil": "2032-09-13",
+          "availabilityStarts": "2022-09-13",
+          "availabilityEnds": "2032-09-13",
           "availability": {
-            "@id": "availability/available",
-            "@type": "Availability",
-            "name": {
-              "en": "Available"
-            },
-            "description": {
-              "en": "A book is available for offer."
-            }
+            "@id": "schema:InStock"
           },
           "itemOffered": {
-            "@id": "book/9780345339706",
-            "@type": "Book",
-            "isbn": "9780345339706",
-            "name": {
-              "en": "The Fellowship of the Ring (The Lord of the Rings, Part 1)"
-            },
-            "keywords": [
-              "middle-earth",
-              "quest"
-            ],
-            "inLanguage": {
-              "@id": "language/en",
-              "@type": "Language",
-              "name": {
-                "en": "English"
-              },
-              "alternateName": "en",
-              "description": "English is a West Germanic language of the Indo-European language family."
-            },
-            "inGenre": {
-              "@id": "literary-genre/fantasy",
-              "@type": "dbpedia:LiteraryGenre",
-              "@context": {
-                "name": {
-                  "@id": "rdfs:label"
-                },
-                "description": {
-                  "@id": "rdfs:comment"
-                }
-              },
-              "name": "Fantasy",
-              "description": "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore."
-            },
-            "author": {
-              "@id": "author/0a206b9f-ac39-4136-8171-1e8b06e3b3f5",
-              "@type": "Author",
-              "familyName": "Tolkien",
-              "givenName": [
-                "John",
-                "Ronald",
-                "Reuel"
-              ],
-              "birthDate": "1892-01-03",
-              "knowsLanguage": {
-                "@id": "language/en",
-                "@type": "Language",
-                "name": {
-                  "en": "English"
-                },
-                "alternateName": "en",
-                "description": "English is a West Germanic language of the Indo-European language family."
-              }
-            }
+            "@id": "book/9780345339706"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "library/hradec-kralove-1",
+      "@type": "Library",
+      "name": {
+        "cs": "Knihovna města Hradce Králové"
+      },
+      "url": "https://www.knihovnahk.cz",
+      "email": {
+        "@id": "mailto:knihovna@knihovnahk.cz"
+      },
+      "makesOffer": [
+        {
+          "@id": "lease-offer/ks94hrdc",
+          "@type": "OfferForLease",
+          "sku": "KS94HRDC",
+          "availabilityStarts": "2015-05-01",
+          "availabilityEnds": "2025-09-01",
+          "availability": {
+            "@id": "schema:InStock"
+          },
+          "itemOffered": {
+            "@id": "book/9780345339706"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "library/hradec-kralove-1",
+      "@type": "Library",
+      "name": {
+        "cs": "Knihovna města Hradce Králové"
+      },
+      "url": "https://www.knihovnahk.cz",
+      "email": {
+        "@id": "mailto:knihovna@knihovnahk.cz"
+      },
+      "makesOffer": [
+        {
+          "@id": "lease-offer/ks94hrdc",
+          "@type": "OfferForLease",
+          "sku": "KS94HRDC",
+          "availabilityStarts": "2015-05-01",
+          "availabilityEnds": "2025-09-01",
+          "availability": {
+            "@id": "schema:InStock"
+          },
+          "itemOffered": {
+            "@id": "book/9780345339706"
           }
         }
       ]

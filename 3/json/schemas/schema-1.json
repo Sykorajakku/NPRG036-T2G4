@@ -30,8 +30,7 @@
               "description": "The URL of the library."
             },
             "email": {
-              "type": "string",
-              "format": "email",
+              "type": "object",
               "description": "The e-mail of the library."
             },
             "makesOffer": {
@@ -46,212 +45,36 @@
                       "type": "string",
                       "description": "Stock Keeping Unit identifier unique in a library system."
                     },
-                    "availableFrom": {
+                    "availabilityStarts": {
                       "type": "string",
                       "description": "Start date when this lease offer is available in library system.",
                       "format": "date"
                     },
-                    "availableUntil": {
+                    "availabilityEnds": {
                       "type": "string",
                       "description": "Date when book copy is no longer available for lease. Book copy might be discontinued or have its lease renewed.",
                       "format": "date"
                     },
                     "availability": {
                       "type": "object",
-                      "description": "Represents state of offered lease, whether it is available (or not) or book is offered only in a library.",
-                      "properties": {
-                        "name": {
-                          "type": "object",
-                          "description": "Name of the state",
-                          "properties": {
-                            "cs": {
-                              "type": "string"
-                            },
-                            "en": {
-                              "type": "string"
-                            },
-                            "sk": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "description": {
-                          "type": "object",
-                          "description": "Textual description of the state.",
-                          "properties": {
-                            "cs": {
-                              "type": "string"
-                            },
-                            "en": {
-                              "type": "string"
-                            },
-                            "sk": {
-                              "type": "string"
-                            }
-                          }
-                        }
-                      },
-                      "required": ["name", "description"]
+                      "description": "Represents state of offered lease, whether it is available (or not) or book is offered only in a library."
                     },
                     "itemOffered": {
                       "type": "object",
                       "description": "This class represents written text that can be published in printed or electronic form.",
                       "properties": {
-                        "isbn": {
+                        "@id": {
                           "type": "string",
-                          "description": "International Standard Book Number. Numeric commercial book identifier that is intended to be unique."
-                        },
-                        "name": {
-                          "type": "object",
-                          "description": "Name for the book which is usually chosen by the author.",
-                          "properties": {
-                            "cs": {
-                              "type": "string"
-                            },
-                            "en": {
-                              "type": "string"
-                            },
-                            "sk": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "keywords": {
-                          "type": "array",
-                          "description": "Keywords accurately portray book's content and reflect the words customers will use when they search.",
-                          "uniqueItems": true,
-                          "items": [
-                            {
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "inLanguage": {
-                          "type": "object",
-                          "description": "Represents natural languages such as Czech, English, Hindi, etc.",
-                          "properties": {
-                            "name": {
-                              "type": "object",
-                              "description": "Name of the language.",
-                              "properties": {
-                                "cs": {
-                                  "type": "string"
-                                },
-                                "en": {
-                                  "type": "string"
-                                },
-                                "sk": {
-                                  "type": "string"
-                                }
-                              }
-                            },
-                            "alternateName": {
-                              "description": "IETF BCP 47 language tag identifying the language.",
-                              "type": "string"
-                            },
-                            "description": {
-                              "description": "Description of the language.",
-                              "type": "string"
-                            }
-                          },
-                          "required": ["name", "alternateName", "description"]
-                        },
-                        "inGenre": {
-                          "type": "object",
-                          "description": "Represents writing genres as categories that distinguish literature based on set of stylistic criteria.",
-                          "properties": {
-                            "name": {
-                              "type": "string",
-                              "description": "Name of the genre"
-                            },
-                            "description": {
-                              "type": "string",
-                              "description": "Description of the genre."
-                            }
-                          },
-                          "required": ["name", "description"]
-                        },
-                        "author": {
-                          "type": "object",
-                          "description": "This class represents alive or dead person.",
-                          "properties": {
-                            "familyName": {
-                              "type": "string",
-                              "description": "Indicates one's family, tribe or community."
-                            },
-                            "givenName": {
-                              "type": "array",
-                              "description": "Part of personal name which differentiates the person from other member of family or group.",
-                              "uniqueItems": true,
-                              "minItems": 1,
-                              "items": [
-                                {
-                                  "type": "string"
-                                }
-                              ]
-                            },
-                            "birthDate": {
-                              "type": "string",
-                              "description": "Person's date of birth in Gregorian calendar.",
-                              "format": "date"
-                            },
-                            "knowsLanguage": {
-                              "type": "object",
-                              "description": "Language person can use. Skill levels or form not distinguished.",
-                              "properties": {
-                                "name": {
-                                  "type": "object",
-                                  "description": "Represents natural languages such as Czech, English, Hindi, etc.",
-                                  "properties": {
-                                    "cs": {
-                                      "type": "string"
-                                    },
-                                    "en": {
-                                      "type": "string"
-                                    },
-                                    "sk": {
-                                      "type": "string"
-                                    }
-                                  }
-                                },
-                                "alternateName": {
-                                  "type": "string",
-                                  "description": "IETF BCP 47 language tag identifying the language."
-                                },
-                                "description": {
-                                  "type": "string",
-                                  "description": "Description of the language."
-                                }
-                              },
-                              "required": [
-                                "name",
-                                "alternateName",
-                                "description"
-                              ]
-                            }
-                          },
-                          "required": [
-                            "familyName",
-                            "givenName",
-                            "birthDate",
-                            "knowsLanguage"
-                          ]
+                          "description": "id of entity which can exist independently on this parent entity"
                         }
                       },
-                      "required": [
-                        "isbn",
-                        "name",
-                        "keywords",
-                        "inLanguage",
-                        "inGenre",
-                        "author"
-                      ]
+                      "required": ["@id"]
                     }
                   },
                   "required": [
                     "sku",
-                    "availableFrom",
-                    "availableUntil",
+                    "availabilityStarts",
+                    "availabilityEnds",
                     "availability",
                     "itemOffered"
                   ]

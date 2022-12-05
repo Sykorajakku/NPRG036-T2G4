@@ -137,35 +137,21 @@
 
 <lease-offer/ks944rur> a schema:OfferForLease;
     schema:sku "KS944RUR"@en;
-    schema:availableFrom "2022-09-13"^^xsd:date;
-    schema:availableUntil "2032-09-13"^^xsd:date;
+    schema:availabilityStarts "2022-09-13"^^xsd:date;
+    schema:availabilityEnds "2032-09-13"^^xsd:date;
     schema:itemOffered <book/9780345339706>;
-    schema:availability <availability/available>.
+    schema:availability schema:InStock.
 
 <lease-offer/ks945rur> a schema:OfferForLease;
     schema:sku "KS945RUR"@en;
-    schema:availableFrom "2020-05-01"^^xsd:date;
-    schema:availableUntil "2030-09-01"^^xsd:date;
+    schema:availabilityStarts "2020-05-01"^^xsd:date;
+    schema:availabilityEnds "2030-09-01"^^xsd:date;
     schema:itemOffered <book/9780345339706>;
-    schema:availability <availability/available>.
+    schema:availability schema:InStock.
 
 <lease-offer/ks94hrdc> a schema:OfferForLease;
     schema:sku "KS94HRDC"@en;
-    schema:availableFrom "2015-05-01"^^xsd:date;
-    schema:availableUntil "2025-09-01"^^xsd:date;
+    schema:availabilityStarts "2015-05-01"^^xsd:date;
+    schema:availabilityEnds "2025-09-01"^^xsd:date;
     schema:itemOffered <book/9780345339706>;
-    schema:availability <availability/available>.
-
-# Availability
-
-<availability/available> a schema:Availability;
-    schema:name "Available"@en;
-    schema:description "A book is available for offer."@en.
-
-<availability/not-available> a schema:Availability;
-    schema:name "Not available"@en;
-    schema:description "A book is not available for offer."@en.
-
-<availability/loaned> a schema:Availability;
-    schema:name "Loaned"@en;
-    schema:description "A book is not available for offer. The book will be available after it's been returned."@en.
+    schema:availability schema:InStock.
