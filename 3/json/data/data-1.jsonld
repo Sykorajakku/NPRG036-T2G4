@@ -44,26 +44,13 @@
           "itemOffered": {
             "@id": "book/9780345339706"
           }
-        }
-      ]
-    },
-    {
-      "@id": "library/hradec-kralove-1",
-      "@type": "Library",
-      "name": {
-        "cs": "Knihovna města Hradce Králové"
-      },
-      "url": "https://www.knihovnahk.cz",
-      "email": {
-        "@id": "mailto:knihovna@knihovnahk.cz"
-      },
-      "makesOffer": [
+        },
         {
-          "@id": "lease-offer/ks94hrdc",
+          "@id": "lease-offer/ks945rur",
           "@type": "OfferForLease",
-          "sku": "KS94HRDC",
-          "availabilityStarts": "2015-05-01",
-          "availabilityEnds": "2025-09-01",
+          "sku": "KS945RUR",
+          "availabilityStarts": "2020-05-01",
+          "availabilityEnds": "2030-09-01",
           "availability": {
             "@id": "schema:InStock"
           },
@@ -98,6 +85,18 @@
           }
         }
       ]
+    },
+    {
+      "@id": "library/brno-1",
+      "@type": "Library",
+      "name": {
+        "cs": "Moravská zemská knihovna v Brně"
+      },
+      "url": "https://www.mzk.cz/",
+      "email": {
+        "@id": "mailto:mzk@mzk.cz"
+      },
+      "makesOffer": []
     }
   ]
 }
