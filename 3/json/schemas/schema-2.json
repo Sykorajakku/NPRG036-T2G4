@@ -29,7 +29,7 @@
           },
           "keywords": {
             "type": "array",
-            "description": "Keywords accurately portray book's content and reflect the words customers will use when they search.",
+            "description": "keywords accurately portray book's content and reflect the words customers will use when they search.",
             "uniqueItems": true,
             "items": [
               {

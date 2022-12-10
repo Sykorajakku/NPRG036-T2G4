@@ -25,9 +25,9 @@ Library users can search each offered book copy by the book information, such as
       - description: Name for the book which is usually chosen by the author.
       - example: The Hobbit
 
-    - keyword:
+    - keywords:
       - type: string
-      - description: Keywords accurately portray book's content and reflect the words customers will use when they search.
+      - description: keywords accurately portray book's content and reflect the words customers will use when they search.
       - example: middle-earth
 
   - Associations:
